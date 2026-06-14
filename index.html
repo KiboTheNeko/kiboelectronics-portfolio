@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiboelectronics | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        kibo: {
+                            green: '#39FF14',
+                            purple: '#B026FF',
+                            blue: '#00F0FF',
+                            dark: '#0a0a0c',
+                            surface: '#121215'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap');
+        body { background-color: #0a0a0c; color: #e2e8f0; }
+        .gradient-text {
+            background: linear-gradient(90deg, #39FF14, #00F0FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover { transition: transform 0.2s ease, border-color 0.2s ease; }
+        .card-hover:hover { transform: translateY(-4px); border-color: #B026FF; }
+    </style>
+</head>
+<body class="antialiased selection:bg-kibo-purple selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-kibo-dark/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold font-mono tracking-tighter">Kibo<span class="text-kibo-green">electronics</span></a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#about" class="hover:text-kibo-blue transition-colors">About</a>
+                <a href="#projects" class="hover:text-kibo-blue transition-colors">Projects</a>
+                <a href="#certificates" class="hover:text-kibo-blue transition-colors">Certificates</a>
+                <a href="#contact" class="hover:text-kibo-blue transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6 max-w-5xl mx-auto flex flex-col justify-center min-h-[80vh]">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+            Engineering the <br>
+            <span class="gradient-text">Optimized Edge.</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mb-8 leading-relaxed">
+            Specializing in hardware-aware AI model pruning, robotics simulations, and embedded systems development. Bridging the gap between resource-constrained hardware and complex intelligent logic.
+        </p>
+        <div class="flex space-x-4">
+            <a href="#projects" class="px-6 py-3 bg-white text-black font-semibold rounded hover:bg-gray-200 transition-colors">View Architecture</a>
+            <a href="#contact" class="px-6 py-3 border border-gray-700 rounded hover:border-kibo-green hover:text-kibo-green transition-colors">Initialize Contact</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 border-t border-gray-800 bg-kibo-surface">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 font-mono"><span class="text-kibo-purple">01.</span> About Protocol</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="text-gray-400 space-y-4 leading-relaxed">
+                    <p>I am a researcher and engineer with a core focus on deploying high-efficiency AI architectures onto edge devices and embedded environments.</p>
+                    <p>My workflow relies heavily on modern C++ and Python, leveraging advanced multi-agent development environments and hardware simulators to prototype and test systems safely before physical deployment.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Core Stack</h3>
+                    <div class="flex flex-wrap gap-2 font-mono text-sm">
+                        <span class="px-3 py-1 bg-gray-800 rounded border border-gray-700">C++</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded border border-gray-700">Python</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded border border-gray-700">TensorFlow/PyTorch</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded border border-gray-700">NVIDIA Isaac Sim</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded border border-gray-700">Webots / ROS2</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded border border-gray-700">ESP32 & Arduino</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 font-mono"><span class="text-kibo-blue">02.</span> Hardware & AI Architectures</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 bg-kibo-surface rounded-lg border border-gray-800 card-hover overflow-hidden">
+                    <img src="https://via.placeholder.com/400x250" alt="HAPIES Framework" class="w-full h-40 object-cover rounded mb-4">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">HAPIES Framework</h3>
+                        <span class="text-kibo-green font-mono text-xs border border-kibo-green px-2 py-1 rounded">C++ / Python</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">Hardware-Aware Pruning for Inference on Embedded Systems. A pipeline designed to optimize, compress, and benchmark neural networks targeting memory-constrained microcontrollers without significant accuracy degradation.</p>
+                    <a href="#" class="text-sm font-mono text-gray-300 hover:text-white">View Repository →</a>
+                </div>
+
+                <div class="p-6 bg-kibo-surface rounded-lg border border-gray-800 card-hover overflow-hidden">
+                    <img src="https://via.placeholder.com/400x250" alt="UAV Visual Odometry" class="w-full h-40 object-cover rounded mb-4">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">UAV Visual Odometry</h3>
+                        <span class="text-kibo-blue font-mono text-xs border border-kibo-blue px-2 py-1 rounded">Isaac Sim</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">Action Graph-driven drone simulation utilizing NVIDIA Isaac Sim. Implemented visual odometry latching for autonomous navigation and environment mapping in complex spatial topologies.</p>
+                    <a href="#" class="text-sm font-mono text-gray-300 hover:text-white">View Architecture →</a>
+                </div>
+
+                <div class="p-6 bg-kibo-surface rounded-lg border border-gray-800 card-hover overflow-hidden">
+                    <img src="https://via.placeholder.com/400x250" alt="Agri-Bot Detection" class="w-full h-40 object-cover rounded mb-4">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">Agri-Bot Detection Pipeline</h3>
+                        <span class="text-kibo-purple font-mono text-xs border border-kibo-purple px-2 py-1 rounded">Webots / YOLOv8n</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">Machine learning pipeline integrated into Webots for an automated robotic sprinkler system. Fine-tuned computer vision models to distinguish crops from weeds for targeted action.</p>
+                    <a href="#" class="text-sm font-mono text-gray-300 hover:text-white">View Details →</a>
+                </div>
+
+                <div class="p-6 bg-kibo-surface rounded-lg border border-gray-800 card-hover overflow-hidden">
+                    <img src="https://via.placeholder.com/400x250" alt="IoT Sensor Lab" class="w-full h-40 object-cover rounded mb-4">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">IoT Sensor Lab Manual</h3>
+                        <span class="text-gray-400 font-mono text-xs border border-gray-600 px-2 py-1 rounded">Documentation</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">Comprehensive Student Lab Manual authored for an ESP32 Trainer Board, detailing protocols for IoT connectivity, sensor polling, and wireless telemetry deployment.</p>
+                    <a href="#" class="text-sm font-mono text-gray-300 hover:text-white">Read Manual →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-20 border-t border-gray-800 bg-kibo-surface">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 font-mono"><span class="text-kibo-green">03.</span> Certifications</h2>
+            <div class="bg-[#0a0a0c] border border-gray-800 rounded-lg p-6">
+                <ul class="divide-y divide-gray-800">
+                    <li class="py-4 flex justify-between items-center group hover:bg-gray-800/30 transition-colors px-2 rounded">
+                        <div>
+                            <h4 class="text-white font-medium group-hover:text-kibo-green transition-colors">Autodesk Fusion 360</h4>
+                            <p class="text-sm text-gray-500">Udemy • 2025</p>
+                        </div>
+                        <img src="https://via.placeholder.com/50x50" alt="Fusion 360 Badge" class="w-12 h-12 rounded">
+                    </li>
+                    <li class="py-4 flex justify-between items-center group hover:bg-gray-800/30 transition-colors px-2 rounded">
+                        <div>
+                            <h4 class="text-white font-medium group-hover:text-kibo-purple transition-colors">VEX Robotics</h4>
+                            <p class="text-sm text-gray-500">Udemy • 2024</p>
+                        </div>
+                        <img src="https://via.placeholder.com/50x50" alt="VEX Badge" class="w-12 h-12 rounded">
+                    </li>
+                    <li class="py-4 flex justify-between items-center group hover:bg-gray-800/30 transition-colors px-2 rounded">
+                        <div>
+                            <h4 class="text-white font-medium group-hover:text-kibo-blue transition-colors">Altium Designer</h4>
+                            <p class="text-sm text-gray-500">Udemy • 2024</p>
+                        </div>
+                        <img src="https://via.placeholder.com/50x50" alt="Altium Badge" class="w-12 h-12 rounded">
+                    </li>
+                    <li class="py-4 flex justify-between items-center group hover:bg-gray-800/30 transition-colors px-2 rounded">
+                        <div>
+                            <h4 class="text-white font-medium group-hover:text-kibo-green transition-colors">VLSI and RTL Design</h4>
+                            <p class="text-sm text-gray-500">BRAC University • 2025</p>
+                        </div>
+                        <img src="https://via.placeholder.com/50x50" alt="VLSI Badge" class="w-12 h-12 rounded">
+                    </li>
+                    <li class="py-4 flex justify-between items-center group hover:bg-gray-800/30 transition-colors px-2 rounded">
+                        <div>
+                            <h4 class="text-white font-medium group-hover:text-kibo-purple transition-colors">Industrial Attachment</h4>
+                            <p class="text-sm text-gray-500">Neural Semiconductor • 2025</p>
+                        </div>
+                        <img src="https://via.placeholder.com/50x50" alt="Neural Semiconductor Badge" class="w-12 h-12 rounded">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 border-t border-gray-800 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-6 font-mono">Establish Connection</h2>
+            <p class="text-gray-400 mb-8">Currently open to research collaborations and engineering roles focused on edge computing and robotics.</p>
+            <a href="mailto:your.email@example.com" class="inline-block px-8 py-4 bg-kibo-blue text-black font-bold rounded hover:bg-white transition-colors shadow-[0_0_15px_rgba(0,240,255,0.3)]">
+                Send Transmission
+            </a>
+
+            <div class="mt-12 flex justify-center space-x-6 text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">GitHub</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white transition-colors">ResearchGate</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-6 border-t border-gray-800 text-center text-sm text-gray-600">
+        <p>© 2026 Kiboelectronics. Designed for optimal performance.</p>
+    </footer>
+
+</body>
+</html>
